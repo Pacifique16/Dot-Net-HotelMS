@@ -1,6 +1,6 @@
 # Hotel Management System
 
-Welcome to my developer portfolio! This project showcases my skills in building desktop applications with .NET. A comprehensive Hotel Management System built with C# Windows Forms and SQL Server, featuring user authentication, room management, and booking functionality.
+Welcome! This project showcases my skills in building desktop applications with .NET. A comprehensive Hotel Management System built with C# Windows Forms and SQL Server, featuring user authentication, room management, and booking functionality.
 
 ## Features 🎉
 
@@ -53,8 +53,26 @@ cd Dot-Net-HotelMS/
 2. Update the connection string in your configuration files
 3. Run the application to initialize the database schema
 
-## License 📄
+## 📝 License
 
-© Copyright 2025 Pacifique Harerimana
+© Copyright 2026 Pacifique Harerimana
 
-⭐ If you found this project helpful or interesting, please consider giving it a star!
+This project is for educational purposes as part of AUCA Dot Net coursework. Feel free to fork and learn from it, but please give credit where it's due.
+
+
+
+## ⭐ Show Your Support
+
+**If you found this project helpful or interesting, please consider giving it a star!** 🌟
+
+Your support motivates me to create more educational projects and helps others discover useful resources.
+
+
+## 👨‍💻 Author
+**Pacifique Harerimana**
+
+📧 Contact: [GitHub](https://github.com/Pacifique16)
+
+
+##
+*Built with ❤️ for learning and sharing knowledge*

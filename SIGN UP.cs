@@ -18,7 +18,7 @@ namespace Hotel_Wednesday
 			roleCombo.SelectedIndex = 1;
 		}
 
-		public static string connString = "Server=.;Database=HotelDB;Integrated Security=true;TrustServerCertificate=true;";
+		public static string connString = "Data Source=Pacifique\\SQLEXPRESS;Initial Catalog=DOTNET;Integrated Security=True;TrustServerCertificate=True;MultipleActiveResultSets=True";
 		SqlConnection con = new SqlConnection(connString);
 		private void fullnameBox_TextChanged(object sender, EventArgs e)
 		{

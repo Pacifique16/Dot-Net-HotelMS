@@ -14,7 +14,7 @@ namespace Hotel_Wednesday
 	public partial class Login : Form
 	{
 		// connecting string global
-		public static string connString = "Server=.;Database=HotelDB;Integrated Security=true;TrustServerCertificate=true;";
+		public static string connString = "Data Source=Pacifique\\SQLEXPRESS;Initial Catalog=DOTNET;Integrated Security=True;TrustServerCertificate=True;MultipleActiveResultSets=True";
 		// sql connection global
 		SqlConnection conn = new SqlConnection(connString);
 		public Login()
@@ -42,11 +42,11 @@ namespace Hotel_Wednesday
 				SqlDataReader reader = cmd.ExecuteReader();
 				if (reader.Read())
 				{
-					string db_password = reader["User_Password"].ToString();
+					string db_password = reader["User_Password"]?.ToString() ?? "";
 					if (verifyPassword(db_password, passwordTxt.Text.Trim()))
 					{
-						string role = reader["role"].ToString();
-						string fullname = reader["Fullname"].ToString();
+						string role = reader["role"]?.ToString() ?? "RECEPTIONIST";
+						string fullname = reader["Fullname"]?.ToString() ?? "";
 
 						Dashboard dashboard = new Dashboard(role, fullname);
 						dashboard.Show();

@@ -15,6 +15,8 @@ namespace Hotel_Wednesday
 		public SIGN_UP()
 		{
 			InitializeComponent();
+			roleCombo.Items.AddRange(new string[] { "Admin", "Receptionist", "Manager" });
+			roleCombo.SelectedIndex = 1;
 		}
 
 		public static string connString = ConfigurationManager.ConnectionStrings["Hotel"].ConnectionString;
@@ -43,7 +45,7 @@ namespace Hotel_Wednesday
 		{
 			try
 			{
-				string query = "INSERT INTO HOTEL_USERSS (Fullname,User_Email, User_Password) VALUES (@fullname,@email,@Password)";
+				string query = "INSERT INTO HOTEL_USERSS (Fullname,User_Email, User_Password, role) VALUES (@fullname,@email,@Password,@role)";
 
 				using (var conLocal = new SqlConnection(connString))
 				using (var cmd = new SqlCommand(query, conLocal))
@@ -51,6 +53,7 @@ namespace Hotel_Wednesday
 					cmd.Parameters.AddWithValue("@fullname", fullnameBox.Text.Trim());
 					cmd.Parameters.AddWithValue("@Email", emailTxt.Text);
 					cmd.Parameters.AddWithValue("@Password", hash(passwordTxt.Text.Trim()));
+					cmd.Parameters.AddWithValue("@role", roleCombo.SelectedItem.ToString().ToUpper());
 
 					conLocal.Open();
 					int rowsAffected = cmd.ExecuteNonQuery();

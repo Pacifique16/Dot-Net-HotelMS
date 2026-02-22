@@ -37,12 +37,14 @@
 			fullnameBox = new TextBox();
 			label1 = new Label();
 			passwordTxt = new TextBox();
+			roleCombo = new ComboBox();
+			label4 = new Label();
 			SuspendLayout();
 			// 
 			// signupBtn
 			// 
 			signupBtn.Font = new Font("Showcard Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-			signupBtn.Location = new Point(124, 335);
+			signupBtn.Location = new Point(124, 395);
 			signupBtn.Name = "signupBtn";
 			signupBtn.Size = new Size(94, 29);
 			signupBtn.TabIndex = 17;
@@ -88,7 +90,7 @@
 			// linkLabel1
 			// 
 			linkLabel1.AutoSize = true;
-			linkLabel1.Location = new Point(124, 295);
+			linkLabel1.Location = new Point(124, 355);
 			linkLabel1.Name = "linkLabel1";
 			linkLabel1.Size = new Size(219, 20);
 			linkLabel1.TabIndex = 11;
@@ -122,11 +124,30 @@
 			passwordTxt.TabIndex = 18;
 			passwordTxt.TextChanged += passwordTxt_TextChanged;
 			// 
+			// roleCombo
+			// 
+			roleCombo.DropDownStyle = ComboBoxStyle.DropDownList;
+			roleCombo.Location = new Point(125, 325);
+			roleCombo.Name = "roleCombo";
+			roleCombo.Size = new Size(264, 28);
+			roleCombo.TabIndex = 19;
+			// 
+			// label4
+			// 
+			label4.AutoSize = true;
+			label4.Location = new Point(125, 302);
+			label4.Name = "label4";
+			label4.Size = new Size(39, 20);
+			label4.TabIndex = 20;
+			label4.Text = "Role";
+			// 
 			// SIGN_UP
 			// 
 			AutoScaleDimensions = new SizeF(8F, 20F);
 			AutoScaleMode = AutoScaleMode.Font;
 			ClientSize = new Size(498, 450);
+			Controls.Add(label4);
+			Controls.Add(roleCombo);
 			Controls.Add(passwordTxt);
 			Controls.Add(signupBtn);
 			Controls.Add(label3);
@@ -154,5 +175,7 @@
 		private TextBox fullnameBox;
 		private Label label1;
 		private TextBox passwordTxt;
+		private ComboBox roleCombo;
+		private Label label4;
 	}
 }

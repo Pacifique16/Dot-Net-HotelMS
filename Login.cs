@@ -1,9 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Configuration;
 using System.Data;
-using System.Data.SqlClient;
+using Microsoft.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -15,7 +14,7 @@ namespace Hotel_Wednesday
 	public partial class Login : Form
 	{
 		// connecting string global
-		public static string connString = ConfigurationManager.ConnectionStrings["hotel"].ConnectionString;
+		public static string connString = "Server=.;Database=HotelDB;Integrated Security=true;TrustServerCertificate=true;";
 		// sql connection global
 		SqlConnection conn = new SqlConnection(connString);
 		public Login()

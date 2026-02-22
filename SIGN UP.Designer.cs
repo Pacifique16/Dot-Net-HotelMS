@@ -167,7 +167,6 @@
 
 		private Button signupBtn;
 		private Label label3;
-		private TextBox textBox3;
 		private Label label2;
 		private TextBox emailTxt;
 		private Label Fullname;

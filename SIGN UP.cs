@@ -1,9 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Configuration;
 using System.Data;
-using System.Data.SqlClient;
+using Microsoft.Data.SqlClient;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
@@ -19,7 +18,7 @@ namespace Hotel_Wednesday
 			roleCombo.SelectedIndex = 1;
 		}
 
-		public static string connString = ConfigurationManager.ConnectionStrings["Hotel"].ConnectionString;
+		public static string connString = "Server=.;Database=HotelDB;Integrated Security=true;TrustServerCertificate=true;";
 		SqlConnection con = new SqlConnection(connString);
 		private void fullnameBox_TextChanged(object sender, EventArgs e)
 		{

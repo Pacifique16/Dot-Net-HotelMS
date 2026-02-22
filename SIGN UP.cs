@@ -52,7 +52,7 @@ namespace Hotel_Wednesday
 					cmd.Parameters.AddWithValue("@fullname", fullnameBox.Text.Trim());
 					cmd.Parameters.AddWithValue("@Email", emailTxt.Text);
 					cmd.Parameters.AddWithValue("@Password", hash(passwordTxt.Text.Trim()));
-					cmd.Parameters.AddWithValue("@role", roleCombo.SelectedItem.ToString().ToUpper());
+					cmd.Parameters.AddWithValue("@role", roleCombo.SelectedItem?.ToString()?.ToUpper() ?? "RECEPTIONIST");
 
 					conLocal.Open();
 					int rowsAffected = cmd.ExecuteNonQuery();

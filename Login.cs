@@ -36,7 +36,6 @@ namespace Hotel_Wednesday
 				string query = "SELECT User_Email, User_Password, role, Fullname FROM HOTEL_USERSS WHERE User_Email = @email";
 				SqlCommand cmd = new SqlCommand(query, conn);
 				cmd.Parameters.AddWithValue("@email", emailTxt.Text.Trim());
-				cmd.Parameters.AddWithValue("@password", passwordTxt.Text.Trim());
 
 				if (conn.State == ConnectionState.Closed)
 					conn.Open();
@@ -59,10 +58,19 @@ namespace Hotel_Wednesday
 						MessageBox.Show("Invalid email or password");
 					}
 				}
+				else
+				{
+					MessageBox.Show("Invalid email or password");
+				}
 			}
 			catch (Exception ex)
 			{
 				MessageBox.Show(ex.Message);
+			}
+			finally
+			{
+				if (conn.State == ConnectionState.Open)
+					conn.Close();
 			}
 		}
 
